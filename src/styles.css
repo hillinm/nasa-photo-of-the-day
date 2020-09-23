@@ -24,6 +24,8 @@
 .sideContainer h1 {
     font-size: 40px;
     border-bottom: 3px solid white;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .sideContainer p {
