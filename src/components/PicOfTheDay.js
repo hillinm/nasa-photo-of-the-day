@@ -13,14 +13,16 @@ export default function PicPage() {
     const [picData, setPicData] = useState([]);
     const [selectedDate, setSelectedDate] = useState(null)
     const PicDate = moment(selectedDate).format('YYYY-MM-DD')
+    console.log(PicDate)
     const effectFn = () => {
         axios
             .get(`https://api.nasa.gov/planetary/apod?api_key=Ae78fPJISS8uzsLe9B0TZWcfhyWzaRkeCuBo86Sy&date=${PicDate}`)
             .then((res) => { 
                 setPicData(res.data)});
     };
-    useEffect(effectFn, []);
+    useEffect(effectFn, [selectedDate]);
     
+
     return (
         <div className="container">
             <img src={picData.hdurl} alt="Pic of the Day" />
