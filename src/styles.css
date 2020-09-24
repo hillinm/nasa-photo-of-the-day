@@ -31,15 +31,11 @@
 .sideContainer p {
     font-style: italic;
 }
-
-.top {
-
-}
-
-.artist {
-
-
-
+.pickDate p{
+    color: white;
+    text-shadow: 0px 0px 5px yellow;
+    line-height: 0;
+    font-weight: bold;
 }
 
 .credits img{

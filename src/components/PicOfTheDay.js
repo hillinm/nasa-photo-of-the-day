@@ -22,7 +22,7 @@ export default function PicPage() {
                 setPicData(res.data)});
         } else {
             axios
-            .get(`https://api.nasa.gov/planetary/apod?api_key=Ae78fPJISS8uzsLe9B0TZWcfhyWzaRkeCuBo86Sy&date=2020-09-22`)
+            .get(`https://api.nasa.gov/planetary/apod?api_key=Ae78fPJISS8uzsLe9B0TZWcfhyWzaRkeCuBo86Sy&date=2020-09-24`)
             .then((res) => { 
                 setPicData(res.data)});
         }
@@ -38,6 +38,7 @@ export default function PicPage() {
             <Top title={picData.title} />
             <Artist copyright={picData.copyright} />
             <div className="pickDate">
+                <p>Pick a Date</p>
                 <DatePicker 
                     selected={selectedDate} 
                     onChange={date => setSelectedDate(date)}
