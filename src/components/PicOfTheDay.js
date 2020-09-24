@@ -28,8 +28,9 @@ export default function PicPage() {
         }
   
     };
+
     useEffect(effectFn, [selectedDate]);
-    
+ 
     return (
         <div className="container">
             <img src={picData.hdurl} alt="Pic of the Day" />
