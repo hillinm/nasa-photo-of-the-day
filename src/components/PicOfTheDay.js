@@ -13,16 +13,23 @@ export default function PicPage() {
     const [picData, setPicData] = useState([]);
     const [selectedDate, setSelectedDate] = useState(null)
     const PicDate = moment(selectedDate).format('YYYY-MM-DD')
-    console.log(PicDate)
     const effectFn = () => {
-        axios
+        
+        if (selectedDate !== null) {
+            axios
             .get(`https://api.nasa.gov/planetary/apod?api_key=Ae78fPJISS8uzsLe9B0TZWcfhyWzaRkeCuBo86Sy&date=${PicDate}`)
             .then((res) => { 
                 setPicData(res.data)});
+        } else {
+            axios
+            .get(`https://api.nasa.gov/planetary/apod?api_key=Ae78fPJISS8uzsLe9B0TZWcfhyWzaRkeCuBo86Sy&date=2020-09-22`)
+            .then((res) => { 
+                setPicData(res.data)});
+        }
+  
     };
     useEffect(effectFn, [selectedDate]);
     
-
     return (
         <div className="container">
             <img src={picData.hdurl} alt="Pic of the Day" />
@@ -41,7 +48,7 @@ export default function PicPage() {
                     />
             </div>
             <div className="credits">
-                <img src="https://pngimage.net/wp-content/uploads/2018/06/nasa-png-5.png" alt="NASA"></img>
+                <img src='../../images/pngfind.com-nasa-png-250493.png' alt="NASA"></img>
             </div>
         </div>
     );
