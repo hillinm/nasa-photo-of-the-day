@@ -28,5 +28,6 @@ const SideContainer = (props) => {
             </Card>
         </Col>
     );
+
 };
 export default SideContainer;

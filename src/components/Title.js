@@ -11,11 +11,17 @@ const PicTitle = styled.div `
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 38px;
+    font-size: 40px;
     line-height: 56px;
     text-shadow: 0px 0px 5px yellow;
 
     color: white;
+    @media (max-width: 800px) {
+        position: absolute;
+        left: auto;
+        text-align: justify;
+        font-size: 40px;
+    }
 `;
 
 const Top = (props) => {

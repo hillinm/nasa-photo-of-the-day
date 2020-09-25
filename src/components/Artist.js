@@ -16,6 +16,12 @@ const ArtistName = styled.div`
     text-shadow: 0px 0px 5px yellow;
 
     color: white;
+    @media (max-width: 800px) {
+        position: absolute;
+        top: 10%;
+        font-size: 20px;
+        left: auto;
+      }
 `;
 
 const Artist = (props) => {
