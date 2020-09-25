@@ -34,7 +34,9 @@ export default function PicPage() {
     return (
         <div className="container">
             <img src={picData.hdurl} alt="Pic of the Day" />
+            <div>
             <SideContainer date={picData.date} explanation={picData.explanation} />
+            </div>
             <Top title={picData.title} />
             <Artist copyright={picData.copyright} />
             <div className="pickDate">
