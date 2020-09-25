@@ -20,7 +20,7 @@ const PicTitle = styled.div `
         position: absolute;
         left: auto;
         text-align: justify;
-        font-size: 20px;
+        font-size: 100%;
     }
 `;
 
